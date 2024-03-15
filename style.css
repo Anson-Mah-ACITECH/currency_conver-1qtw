@@ -1,0 +1,31 @@
+/* Name: Anson Mah */
+/* Date: 14 March, 2024 (π Day) */
+
+.full_container {
+  border: 1px black solid;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.full_container {
+  padding: 1em;
+}
+
+.stuff {
+  padding: 1em 0;
+  display: grid;
+}
+
+#title, .swapButton {
+  text-align: center;
+}
+
+.stuff_stuff {
+  padding: 0.5em 0.2em;
+}
