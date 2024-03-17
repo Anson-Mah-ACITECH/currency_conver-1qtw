@@ -15,7 +15,7 @@
     <div class="mini_container">
 
       <!--Stuff Top-->
-      <div class="both_boxes">
+      <div class="all_boxes">
         <select class="one_box currency_list" id="currency_top">
           <option value="AUD" selected>AUD - Australian Dollar</option>
           <option value="FJD">FJD - Fijian Dollar</option>
@@ -28,7 +28,10 @@
           <option value="WST">WST - Samoan Tālā</option>
           <option value="XPF">XPF - CFP Franc</option>
         </select>
-        <input type="number" class="one_box valueBoth" value="1" id="value1">
+        <div class="currency_boxes">
+          <div class="currency_symbol one_box" id="currency_symbol_top">$</div>
+          <input type="number" class="one_box valueBoth" value="1" id="value1">
+        </div>
       </div>
 
       <!--Swap Button-->
@@ -37,7 +40,7 @@
       </div>
 
       <!--Stuff Bottom-->
-      <div class="both_boxes">
+      <div class="all_boxes">
         <select class="one_box currency_list" id="currency_bottom">
           <option value="AUD">AUD - Australian Dollar</option>
           <option value="FJD">FJD - Fijian Dollar</option>
@@ -50,7 +53,10 @@
           <option value="WST">WST - Samoan Tālā</option>
           <option value="XPF">XPF - CFP Franc</option>
         </select>
-        <input type="number" class="one_box valueBoth" value="0.66" id="value2">
+        <div class="currency_boxes">
+          <div class="currency_symbol one_box" id="currency_symbol_bottom">$</div>
+          <input type="number" class="one_box valueBoth" value="0.66" id="value2">
+        </div>
       </div>
 
     </div>

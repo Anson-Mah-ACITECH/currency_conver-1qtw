@@ -18,15 +18,32 @@ body {
   padding: 1em;
 }
 
-.both_boxes {
+.all_boxes {
   padding: 1em 0;
   display: grid;
 }
 
-#title, #swapButton {
+#title, #swapButton, .currency_symbol {
   text-align: center;
 }
 
 .one_box {
   padding: 0.5em 0.2em;
+}
+
+.currency_symbol {
+  border: 1px black solid;
+  width: fit-content;
+}
+
+.currency_boxes {
+  display: flex;
+}
+
+.currency_symbol {
+  width: 1.5em;
+}
+
+.valueBoth {
+  width: 26.8em;
 }
