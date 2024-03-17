@@ -23,7 +23,7 @@ body {
   display: grid;
 }
 
-#title, #swapButton, .currency_symbol {
+#title, #swapButton, .currency_symbol, #link {
   text-align: center;
 }
 

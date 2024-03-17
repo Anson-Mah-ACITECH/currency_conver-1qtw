@@ -1,5 +1,5 @@
 // Name: Anson Mah
-// Date: 14 March, 2024 (π Day)
+// Date: 15 March, 2024
 
 // Sets the exchange rates for the currencies
 const exchange_rates = {
