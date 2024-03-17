@@ -18,15 +18,15 @@ body {
   padding: 1em;
 }
 
-.stuff {
+.both_boxes {
   padding: 1em 0;
   display: grid;
 }
 
-#title, .swapButton {
+#title, #swapButton {
   text-align: center;
 }
 
-.stuff_stuff {
+.one_box {
   padding: 0.5em 0.2em;
 }

@@ -15,40 +15,42 @@
     <div class="mini_container">
 
       <!--Stuff Top-->
-      <div class="stuff top">
-        <select class="stuff_stuff currency_list">
+      <div class="both_boxes">
+        <select class="one_box currency_list" id="currency_top">
           <option value="AUD" selected>AUD - Australian Dollar</option>
           <option value="FJD">FJD - Fijian Dollar</option>
           <option value="NZD">NZD - New Zealand Dollar</option>
           <option value="PGK">PGK - Papua New Guinean Kina</option>
+          <option value="SBD">SBD - Solomon Islands Dollar</option>
           <option value="TOP">TOP - Tongan Paʻanga</option>
           <option value="USD">USD - United States Dollar</option>
           <option value="VUV">VUV - Vanuatu Vatu</option>
           <option value="WST">WST - Samoan Tālā</option>
           <option value="XPF">XPF - CFP Franc</option>
         </select>
-        <input type="text" class="stuff_stuff" value="1">
+        <input type="number" class="one_box valueBoth" value="1" id="value1">
       </div>
 
       <!--Swap Button-->
-      <div class="swapButton">
+      <div id="swapButton">
         <button onclick="swap()">Swap</button>
       </div>
 
       <!--Stuff Bottom-->
-      <div class="stuff bottom">
-        <select class="stuff_stuff currency_list">
+      <div class="both_boxes">
+        <select class="one_box currency_list" id="currency_bottom">
           <option value="AUD">AUD - Australian Dollar</option>
           <option value="FJD">FJD - Fijian Dollar</option>
           <option value="NZD">NZD - New Zealand Dollar</option>
           <option value="PGK">PGK - Papua New Guinean Kina</option>
+          <option value="SBD">SBD - Solomon Islands Dollar</option>
           <option value="TOP">TOP - Tongan Paʻanga</option>
           <option value="USD" selected>USD - United States Dollar</option>
           <option value="VUV">VUV - Vanuatu Vatu</option>
           <option value="WST">WST - Samoan Tālā</option>
           <option value="XPF">XPF - CFP Franc</option>
         </select>
-        <input type="text" class="stuff_stuff" value="0.66">
+        <input type="number" class="one_box valueBoth" value="0.66" id="value2">
       </div>
 
     </div>
@@ -62,6 +64,7 @@
 1 AUD: 1.08 NZD
 1 AUD: 2.52 PGK
 1 AUD: 1.55 TOP
+1 AUD: 5.53 SBD
 1 AUD: 0.66 USD
 1 AUD: 78.45 VUV
 1 AUD: 1.80 WST
