@@ -29,64 +29,59 @@ const exchange_rates = {
   }
 }
 
-const value1 = document.getElementById('value1');
-const value2 = document.getElementById('value2');
-const currency_top = document.getElementById('currency_top');
-const currency_bottom = document.getElementById('currency_bottom');
-
-value1.addEventListener('input', convert);
-value2.addEventListener('input', convert);
-currency_top.addEventListener('input', convert);
-currency_bottom.addEventListener('input', convert);
-currency_top.addEventListener('input', change_symbol);
-currency_bottom.addEventListener('input', change_symbol);
+input_value_top.addEventListener('input', convert);
+input_value_bottom.addEventListener('input', convert);
+selected_currency_top.addEventListener('input', convert);
+selected_currency_bottom.addEventListener('input', convert);
+selected_currency_top.addEventListener('input', change_symbol);
+selected_currency_bottom.addEventListener('input', change_symbol);
 
 function swap() {
-  let currency_top_value = document.getElementById('currency_top').value;
-  let currency_bottom_value = document.getElementById('currency_bottom').value;
-  document.getElementById('currency_top').value = currency_bottom_value;
-  document.getElementById('currency_bottom').value = currency_top_value;
+  let selected_currency_top = document.getElementById('selected_currency_top').value;
+  let selected_currency_bottom = document.getElementById('selected_currency_bottom').value;
+  document.getElementById('selected_currency_top').value = selected_currency_bottom;
+  document.getElementById('selected_currency_bottom').value = selected_currency_top;
   convert();
   change_symbol();
 }
 
 function convert() {
-  let value_top = document.getElementById('value1').value;
-  let currency_top_value = document.getElementById('currency_top').value;
-  let currency_bottom_value = document.getElementById('currency_bottom').value;
-  let placeholder_value = value_top*exchange_rates['XXX to AUD'][currency_top_value];
-  let placeholder_value_2 = placeholder_value*exchange_rates['AUD to XXX'][currency_bottom_value];
+  let input_value_top = document.getElementById('input_value_top').value;
+  let selected_currency_top = document.getElementById('selected_currency_top').value;
+  let selected_currency_bottom = document.getElementById('selected_currency_bottom').value;
+  let placeholder_value = input_value_top*exchange_rates['XXX to AUD'][selected_currency_top];
+  let placeholder_value_2 = placeholder_value*exchange_rates['AUD to XXX'][selected_currency_bottom];
   let new_bottom_value = Math.round(placeholder_value_2*100)/100;
-  document.getElementById('value2').value = new_bottom_value;
+  document.getElementById('input_value_bottom').value = new_bottom_value;
 }
 
 function change_symbol() {
-  let currency_top_value = document.getElementById('currency_top').value;
-  let currency_bottom_value = document.getElementById('currency_bottom').value;
+  let selected_currency_top = document.getElementById('selected_currency_top').value;
+  let selected_currency_bottom = document.getElementById('selected_currency_bottom').value;
 
-  if (currency_top_value == "AUD" || currency_top_value == 'NZD' || currency_top_value == 'SBD' || currency_top_value == 'USD' || currency_top_value == 'WST') {
+  if (selected_currency_top == "AUD" || selected_currency_top == 'NZD' || selected_currency_top == 'SBD' || selected_currency_top == 'USD' || selected_currency_top == 'WST') {
     document.getElementById('currency_symbol_top').innerHTML = '$';
-  } else if (currency_top_value == "FJD") {
+  } else if (selected_currency_top == "FJD") {
     document.getElementById('currency_symbol_top').innerHTML = 'F$';
-  } else if (currency_top_value == 'PGK') {
+  } else if (selected_currency_top == 'PGK') {
     document.getElementById('currency_symbol_top').innerHTML = 'K';
-  } else if (currency_top_value == 'TOP') {
+  } else if (selected_currency_top == 'TOP') {
     document.getElementById('currency_symbol_top').innerHTML = 'T$';
-  } else if (currency_top_value == 'VUV') {
+  } else if (selected_currency_top == 'VUV') {
     document.getElementById('currency_symbol_top').innerHTML = 'VT';
   } else {
     document.getElementById('currency_symbol_top').innerHTML = 'F';
   }
 
-  if (currency_bottom_value == 'AUD' || currency_bottom_value == 'NZD' || currency_bottom_value == 'SBD' || currency_bottom_value == 'USD' || currency_bottom_value == 'WST') {
+  if (selected_currency_bottom == 'AUD' || selected_currency_bottom == 'NZD' || selected_currency_bottom == 'SBD' || selected_currency_bottom == 'USD' || selected_currency_bottom == 'WST') {
     document.getElementById('currency_symbol_bottom').innerHTML = '$';
-  } else if (currency_bottom_value == 'FJD') {
+  } else if (selected_currency_bottom == 'FJD') {
     document.getElementById('currency_symbol_bottom').innerHTML = 'F$';
-  } else if (currency_bottom_value == 'PGK') {
+  } else if (selected_currency_bottom == 'PGK') {
     document.getElementById('currency_symbol_bottom').innerHTML = 'K';
-  } else if (currency_bottom_value == 'TOP') {
+  } else if (selected_currency_bottom == 'TOP') {
     document.getElementById('currency_symbol_bottom').innerHTML = 'T$';
-  } else if (currency_bottom_value == 'VUV') {
+  } else if (selected_currency_bottom == 'VUV') {
     document.getElementById('currency_symbol_bottom').innerHTML = 'VT';
   } else {
     document.getElementById('currency_symbol_bottom').innerHTML = 'F';
