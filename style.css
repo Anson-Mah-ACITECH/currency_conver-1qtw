@@ -2,7 +2,8 @@
 /* Date: 14 March, 2024 (π Day) */
 
 .full_container {
-  border: 1px black solid;
+  border-radius: 5%;
+  background-color: rgba(204, 242, 255, 0.7);
 }
 
 body {
@@ -12,6 +13,8 @@ body {
   min-height: 100vh;
   flex-direction: column;
   overflow: hidden;
+  background-image: url('island_background.jpg');
+  font-family: sans-serif;
 }
 
 .full_container {
@@ -21,9 +24,12 @@ body {
 .all_boxes {
   padding: 1em 0;
   display: grid;
+  gap: 0.5em;
+  position: relative;
+  left: 1em;
 }
 
-#title, #swapButton, .currency_symbol, #link {
+#title, #swapButton, #link {
   text-align: center;
 }
 
@@ -34,16 +40,24 @@ body {
 .currency_symbol {
   border: 1px black solid;
   width: fit-content;
+  text-align: center;
 }
 
 .currency_boxes {
   display: flex;
+  gap: 0.45em;
 }
 
 .currency_symbol {
   width: 1.5em;
+  background-color: white;
 }
 
 .valueBoth {
-  width: 26.8em;
+  width: 26.3em;
+}
+
+.currency_list {
+  padding: 0.9em 0.2em;
+  width: 30em;
 }
