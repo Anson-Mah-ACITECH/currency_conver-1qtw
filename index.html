@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="full_container">
+  <div class="full_container" id="full_container">
     <h1 id="title">Oceanic Currency Converter</h1>
     <div class="mini_container">
 
@@ -58,9 +58,13 @@
           <input type="number" class="one_box valueBoth" value="0.66" id="input_value_bottom">
         </div>
       </div>
+      <div id="map_button">
+        <button onclick="map()">Open Map</button>
+      </div>
       <!-- <p id="link"><a href="map.html">Open Map</a></p> -->
     </div>
   </div>
+  <img src="map_with_names.png" id="map_with_names">
   <script src="script.js"></script>
 </body>
 </html>

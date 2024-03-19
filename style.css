@@ -4,6 +4,9 @@
 .full_container {
   border-radius: 5%;
   background-color: rgba(204, 242, 255, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 body {
@@ -15,21 +18,21 @@ body {
   overflow: hidden;
   background-image: url('island_background.jpg');
   font-family: sans-serif;
+  background-size: cover;
 }
 
 .full_container {
   padding: 1em;
+  position: relative;
 }
 
 .all_boxes {
   padding: 1em 0;
   display: grid;
   gap: 0.5em;
-  position: relative;
-  left: 1em;
 }
 
-#title, #swapButton, #link {
+#title, #swapButton, #link, #map_button {
   text-align: center;
 }
 
@@ -60,4 +63,26 @@ body {
 .currency_list {
   padding: 0.9em 0.2em;
   width: 30em;
+}
+
+#map_with_names {
+  position: absolute;
+  height: 28em;
+  border: 5px black solid;
+  right: 10em;
+  visibility: hidden;
+}
+
+@media (max-width: 1581px) {
+  body {
+    overflow: auto;
+  }
+
+  #map_with_names {
+    position: absolute;
+    height: 28em;
+    border: 5px black solid;
+    top: 20em;
+    visibility: hidden;
+  }
 }
