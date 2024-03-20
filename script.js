@@ -112,7 +112,6 @@ function map() {
     close_map();
   }
 }
-
 function open_map() {
   let map = document.createElement('img');
   map.setAttribute('id', 'map_with_names');

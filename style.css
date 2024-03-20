@@ -32,7 +32,7 @@ body {
   gap: 0.5em;
 }
 
-#title, #swapButton, #link, #map_button {
+#title, #swapButton, #map_button {
   text-align: center;
 }
 
@@ -74,7 +74,8 @@ body {
   padding: 0.5em 1em;
 }
 
-@media (max-width: 1250px) {
+/* If screen small, map show below not right. */
+@media (max-width: 1350px) {
   body {
     flex-direction: column;
     overflow: scroll;
@@ -82,9 +83,10 @@ body {
   }
 
   #map_with_names {
-    height: 50vw;
+    height: 35vw;
   }
 
+  /* Custom Scrollbar */
   ::-webkit-scrollbar {
     width: 1vh;
   }
