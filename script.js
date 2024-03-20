@@ -114,15 +114,16 @@ function map() {
 }
 
 function open_map() {
-  document.getElementById("full_container").style.right="27em";
-  document.getElementById("map_with_names").style.visibility="visible";
+  let map = document.createElement('img');
+  map.setAttribute('id', 'map_with_names');
+  map.setAttribute('src', 'map_with_names.png');
+  document.body.appendChild(map);
   map_state=true;
   document.getElementById('map_button').innerHTML = '<button onclick="map()" class="button">Close Map</button>';
 }
 
 function close_map() {
-  document.getElementById("full_container").style.right="";
-  document.getElementById("map_with_names").style.visibility="hidden";
+  document.getElementById('map_with_names').remove();
   map_state=false;
   document.getElementById('map_button').innerHTML = '<button onclick="map()" class="button">Open Map</button>';
 }
