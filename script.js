@@ -102,27 +102,3 @@ function change_symbol() {
     document.getElementById('currency_symbol_bottom').innerHTML = 'F';
   }
 }
-
-// Opens the map if it is closed. Closes the map if it is open. 
-let map_state = false;
-function map() {
-  if (map_state==false) {
-    open_map();
-  } else {
-    close_map();
-  }
-}
-
-function open_map() {
-  document.getElementById("full_container").style.right="27em";
-  document.getElementById("map_with_names").style.visibility="visible";
-  map_state=true;
-  document.getElementById('map_button').innerHTML = '<button onclick="map()" class="button">Close Map</button>';
-}
-
-function close_map() {
-  document.getElementById("full_container").style.right="";
-  document.getElementById("map_with_names").style.visibility="hidden";
-  map_state=false;
-  document.getElementById('map_button').innerHTML = '<button onclick="map()" class="button">Open Map</button>';
-}

@@ -14,7 +14,6 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  flex-direction: column;
   overflow: hidden;
   background-image: url('island_background.jpg');
   font-family: sans-serif;
@@ -65,24 +64,22 @@ body {
   width: 30em;
 }
 
-#map_with_names {
-  position: absolute;
-  height: 28em;
-  border: 5px black solid;
-  right: 10em;
-  visibility: hidden;
-}
-
-@media (max-width: 1581px) {
-  body {
-    overflow: auto;
-  }
-
-  #map_with_names {
-    top: 20em;
-  }
-}
-
 .button {
   padding: 0.5em 1em;
+}
+
+#map_button {
+  height: 1.65em;
+  width: 1.65em;
+  background-color: hsl(240, 80%, 30%);
+  position: relative;
+  bottom: 3.7em;
+  font-size: 2.25em;
+  user-select: none;
+  transition: background-color 0.35s;
+}
+
+#map_button:hover {
+  background-color: hsl(240, 70%, 40%);
+  transition: background-color 0.5s;
 }
