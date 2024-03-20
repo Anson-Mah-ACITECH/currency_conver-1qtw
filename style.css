@@ -79,10 +79,10 @@ body {
   }
 
   #map_with_names {
-    position: absolute;
-    height: 28em;
-    border: 5px black solid;
     top: 20em;
-    visibility: hidden;
   }
+}
+
+.button {
+  padding: 0.5em 1em;
 }
