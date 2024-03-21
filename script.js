@@ -105,6 +105,7 @@ function change_symbol() {
 
 // Opens the map if it is closed. Closes the map if it is open. 
 let map_state = false;
+
 function map() {
   if (map_state==false) {
     open_map();
@@ -112,6 +113,7 @@ function map() {
     close_map();
   }
 }
+
 function open_map() {
   let map = document.createElement('img');
   map.setAttribute('id', 'map_with_names');
